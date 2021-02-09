@@ -1,0 +1,8 @@
+include README.md
+include CHANGELOG.md
+include ROADMAP.md
+include LICENSE
+include VERSION
+include docs/Makefile
+recursive-include docs/source *
+global-exclude .DS_Store

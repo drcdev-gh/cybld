@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+install:
+  - make sys-reqs
+  - make sys-reqs-dev
+script:
+  - tox -e $(echo py$TRAVIS_PYTHON_VERSION | tr -d .)
+  - tox -e flake8
+
+after_success:
+    - codecov
+
+notifications:
+    email: false
